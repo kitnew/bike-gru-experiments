@@ -1,0 +1,14 @@
+horizon: 12
+n_features: 14
+normalization_method: minmax
+seq_len: 24
+split_ratios:
+- 0.5
+- 0.2
+- 0.3
+target_idx:
+- 1
+test_samples: 5215
+timestamp: '20250426_231611'
+train_samples: 8689
+val_samples: 3475

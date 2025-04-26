@@ -440,7 +440,8 @@ def preprocess_pipeline(config_path: str) -> Dict:
         raise FileNotFoundError(f"No data files found in {raw_dir}")
     
     # Use the first file for now (can be extended to handle multiple files)
-    data_file = os.path.join(raw_dir, raw_files[0])
+    print(raw_files)
+    data_file = os.path.join(raw_dir, raw_files[0 if raw_files[0].endswith('.csv') else 1])
     logger.info(f"Processing file: {data_file}")
     
     # Load and validate data
