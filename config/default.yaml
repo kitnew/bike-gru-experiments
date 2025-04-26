@@ -1,0 +1,27 @@
+data:
+  dataset_name: "London bike sharing dataset"
+  dataset_url: "https://www.kaggle.com/datasets/hmavrodiev/london-bike-sharing-dataset"
+  seed: 95123
+
+dirs:
+  raw_dir: /home/kitne/University/2lvl/SU/bike-gru-experiments/data/raw
+  processed_dir: /home/kitne/University/2lvl/SU/bike-gru-experiments/data/processed
+  checkpoint_dir: /home/kitne/University/2lvl/SU/bike-gru-experiments/experiments/checkpoints
+  logs_dir: /home/kitne/University/2lvl/SU/bike-gru-experiments/experiments/logs
+  plots_dir: /home/kitne/University/2lvl/SU/bike-gru-experiments/experiments/plots
+
+preprocess:
+  seq_len: 24
+  horizon: 12
+  train_split: [0.5, 0.2, 0.3]
+  target_idx: [1]  # Index of target column (cnt)
+  datetime_format: "%Y-%m-%d %H:%M:%S"
+  datetime_column: "timestamp"
+  normalization:
+    method: "minmax"  # Options: minmax, zscore
+    feature_range: [0, 1]  # For minmax scaling
+  validation:
+    check_missing: true
+    check_dimensions: true
+  output:
+    format: "npz"  # Options: npy, npz
