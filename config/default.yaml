@@ -25,3 +25,8 @@ preprocess:
     check_dimensions: true
   output:
     format: "npz"  # Options: npy, npz
+
+dataloader:
+  batch_size: 32
+  num_workers: 4
+  shuffle: true
