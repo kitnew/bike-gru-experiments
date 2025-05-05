@@ -176,3 +176,5 @@ cython_debug/
 data*.npz
 metadata*.yaml
 scaler*.npz
+
+model_epoch*.pt
