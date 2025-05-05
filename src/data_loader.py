@@ -27,7 +27,8 @@ class TimeSeriesDataset(Dataset):
                  data_path: Optional[str] = None, 
                  X: Optional[np.ndarray] = None, 
                  y: Optional[np.ndarray] = None,
-                 config: Optional[Dict] = None):
+                 config: Optional[Dict] = None,
+                 verbose: bool = False):
         """
         Initialize the dataset either from files in a directory or from provided arrays.
         
@@ -38,12 +39,14 @@ class TimeSeriesDataset(Dataset):
             config: Configuration dictionary with dataset parameters
         """
         self.config = config
+        self.verbose = verbose
         
         # Load data either from arrays or from files
         if X is not None and y is not None:
             self.X = X
             self.y = y
-            logger.info(f"Dataset initialized from provided arrays: {self.X.shape} inputs, {self.y.shape} targets")
+            if verbose:
+                logger.info(f"Dataset initialized from provided arrays: {self.X.shape} inputs, {self.y.shape} targets")
         elif data_path is not None:
             self._load_from_path(data_path)
         else:
@@ -53,7 +56,8 @@ class TimeSeriesDataset(Dataset):
         self.X_tensor = torch.FloatTensor(self.X)
         self.y_tensor = torch.FloatTensor(self.y)
         
-        logger.info(f"Dataset prepared with {len(self)} samples")
+        if verbose:
+            logger.info(f"Dataset prepared with {len(self)} samples")
     
     def _load_from_path(self, data_path: str) -> None:
         """
@@ -62,7 +66,8 @@ class TimeSeriesDataset(Dataset):
         Args:
             data_path: Path to directory with processed data files
         """
-        logger.info(f"Loading data from {data_path}")
+        if self.verbose:
+            logger.info(f"Loading data from {data_path}")
         
         # Find the most recent data file (assuming naming convention from preprocess.py)
         npz_files = [f for f in os.listdir(data_path) if f.startswith('data_') and f.endswith('.npz')]
@@ -74,7 +79,8 @@ class TimeSeriesDataset(Dataset):
         npz_files.sort(reverse=True)  # Most recent first
         latest_file = os.path.join(data_path, npz_files[0])
         
-        logger.info(f"Loading data from {latest_file}")
+        if self.verbose:
+            logger.info(f"Loading data from {latest_file}")
         
         # Load data
         data = np.load(latest_file)
@@ -94,7 +100,8 @@ class TimeSeriesDataset(Dataset):
         else:
             raise ValueError(f"Invalid split: {split}. Must be one of: train, val, test")
         
-        logger.info(f"Loaded {split} data: {self.X.shape} inputs, {self.y.shape} targets")
+        if self.verbose:
+            logger.info(f"Loaded {split} data: {self.X.shape} inputs, {self.y.shape} targets")
     
     def __len__(self) -> int:
         """Return the number of samples in the dataset."""
@@ -113,7 +120,7 @@ class TimeSeriesDataset(Dataset):
         return self.X_tensor[idx], self.y_tensor[idx]
 
 
-def get_dataloader(config: Dict, split: str = 'train') -> DataLoader:
+def get_dataloader(config: Dict, split: str = 'train', verbose: bool = False) -> DataLoader:
     """
     Create a DataLoader for the specified split.
     
@@ -124,13 +131,14 @@ def get_dataloader(config: Dict, split: str = 'train') -> DataLoader:
     Returns:
         DataLoader for the specified split
     """
-    logger.info(f"Creating {split} dataloader")
+    if verbose:
+        logger.info(f"Creating {split} dataloader")
     
     # Extract parameters
-    data_path = config['dirs']['processed_dir']
-    batch_size = config['dataloader']['batch_size']
-    num_workers = config['dataloader'].get('num_workers', 0)
-    shuffle = config['dataloader'].get('shuffle', True) if split == 'train' else False
+    data_path = config.dirs.processed_dir
+    batch_size = config.dataloader.batch_size
+    num_workers = config.dataloader.num_workers
+    shuffle = config.dataloader.shuffle if split == 'train' else False
     
     # Create dataset config with the specified split
     dataset_config = {'split': split}
@@ -147,12 +155,13 @@ def get_dataloader(config: Dict, split: str = 'train') -> DataLoader:
         pin_memory=torch.cuda.is_available()
     )
     
-    logger.info(f"Created {split} dataloader with {len(dataset)} samples, batch size {batch_size}")
+    if verbose:
+        logger.info(f"Created {split} dataloader with {len(dataset)} samples, batch size {batch_size}")
     
     return dataloader
 
 
-def get_all_dataloaders(config: Dict) -> Dict[str, DataLoader]:
+def get_all_dataloaders(config: Dict, verbose: bool = False) -> Dict[str, DataLoader]:
     """
     Create DataLoaders for all splits (train, val, test).
     
@@ -163,7 +172,7 @@ def get_all_dataloaders(config: Dict) -> Dict[str, DataLoader]:
         Dictionary with DataLoaders for each split
     """
     return {
-        'train': get_dataloader(config, 'train'),
-        'val': get_dataloader(config, 'val'),
-        'test': get_dataloader(config, 'test')
+        'train': get_dataloader(config, 'train', verbose=verbose),
+        'val': get_dataloader(config, 'val', verbose=verbose),
+        'test': get_dataloader(config, 'test', verbose=verbose)
     }

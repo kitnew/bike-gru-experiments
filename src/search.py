@@ -508,36 +508,36 @@ class HyperparameterSearch:
 
 def main():
     """Example usage of the hyperparameter search."""
-    # Define parameter grid
+    # Define parameter grid according to the best parameters found across previous searches
     param_grid = {
-        'hidden_size': [32, 64, 128, 256, 512],
-        'num_layers': [1, 2, 3, 4, 5],
-        'dropout': [0.0, 0.1, 0.2, 0.3, 0.4, 0.5],
-        'learning_rate': [0.01, 0.001, 0.0001, 0.00001],
-        'weight_decay': [0.0, 0.0001, 0.001, 0.00001],
-        'bidirectional': [False, True],
+        'hidden_size': [64, 128, 512],
+        'num_layers': [1, 2],
+        'dropout': [0.0, 0.1],
+        'learning_rate': [0.01, 0.0001],
+        'weight_decay': [0.0, 0.0001, 1e-05],
+        'bidirectional': [True, False],
         'num_epochs': [100],
-        'early_stopping_patience': [5, 10, 15],
-        'lr_factor': [0.5, 0.25, 0.1],
-        'lr_patience': [5, 10]
+        'early_stopping_patience': [15, 10],
+        'lr_factor': [0.1, 0.5],
+        'lr_patience': [10]
     }
-    
+    # Some of the parameters were changed to speed up the search
+
     # Create and run the search
     search = HyperparameterSearch(
         base_config_path="/home/kitne/University/2lvl/SU/bike-gru-experiments/config/default.yaml",
         param_grid=param_grid,
-        search_method='random',  # 'grid', 'random', or 'bayesian'
-        n_trials=25,            # Only used for random and bayesian search
+        search_method='grid',  # 'grid'
         metric='val_rmse',       # Metric to optimize
         direction='minimize',    # 'minimize' or 'maximize'
         n_jobs=1,               # Number of parallel jobs
-        experiment_name="random_search",
+        experiment_name="grid_search",
         verbose=False
     )
-    
+
     # Run the search
     results = search.run()
-    
+
     # Print the best result
     completed_results = [r for r in results if r['status'] == 'completed']
     if completed_results:
@@ -545,7 +545,7 @@ def main():
             best_result = min(completed_results, key=lambda x: x['best_value'])
         else:
             best_result = max(completed_results, key=lambda x: x['best_value'])
-        
+
         print(f"\nBest configuration:")
         print(f"  {search.metric}: {best_result['best_value']:.6f}")
         print(f"  Parameters: {best_result['params']}")
