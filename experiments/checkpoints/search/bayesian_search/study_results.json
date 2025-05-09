@@ -1,0 +1,698 @@
+{
+    "best_params": {
+        "hidden_size": 128,
+        "num_layers": 2,
+        "dropout": 0.1,
+        "learning_rate": 0.01,
+        "weight_decay": 0.0,
+        "bidirectional": true,
+        "num_epochs": 100,
+        "early_stopping_patience": 15,
+        "lr_factor": 0.1,
+        "lr_patience": 10
+    },
+    "best_value": 0.05426938086748123,
+    "n_trials": 40,
+    "trials": [
+        {
+            "number": 0,
+            "params": {
+                "hidden_size": 256,
+                "num_layers": 5,
+                "dropout": 0.5,
+                "learning_rate": 0.01,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 10,
+                "lr_factor": 0.25,
+                "lr_patience": 5
+            },
+            "value": 0.05919451266527176,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 1,
+            "params": {
+                "hidden_size": 64,
+                "num_layers": 3,
+                "dropout": 0.4,
+                "learning_rate": 1e-05,
+                "weight_decay": 0.0001,
+                "bidirectional": false,
+                "num_epochs": 100,
+                "early_stopping_patience": 5,
+                "lr_factor": 0.5,
+                "lr_patience": 10
+            },
+            "value": 0.06370526552200317,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 2,
+            "params": {
+                "hidden_size": 512,
+                "num_layers": 4,
+                "dropout": 0.5,
+                "learning_rate": 0.0001,
+                "weight_decay": 0.0001,
+                "bidirectional": false,
+                "num_epochs": 100,
+                "early_stopping_patience": 10,
+                "lr_factor": 0.25,
+                "lr_patience": 5
+            },
+            "value": 0.05730453506112099,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 3,
+            "params": {
+                "hidden_size": 256,
+                "num_layers": 4,
+                "dropout": 0.5,
+                "learning_rate": 0.001,
+                "weight_decay": 0.0001,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 10,
+                "lr_factor": 0.5,
+                "lr_patience": 5
+            },
+            "value": 0.059974927455186844,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 4,
+            "params": {
+                "hidden_size": 32,
+                "num_layers": 5,
+                "dropout": 0.2,
+                "learning_rate": 0.01,
+                "weight_decay": 0.0001,
+                "bidirectional": false,
+                "num_epochs": 100,
+                "early_stopping_patience": 10,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.06294763088226318,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 5,
+            "params": {
+                "hidden_size": 512,
+                "num_layers": 5,
+                "dropout": 0.3,
+                "learning_rate": 0.01,
+                "weight_decay": 0.001,
+                "bidirectional": false,
+                "num_epochs": 100,
+                "early_stopping_patience": 5,
+                "lr_factor": 0.25,
+                "lr_patience": 10
+            },
+            "value": 0.08897868543863297,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 6,
+            "params": {
+                "hidden_size": 32,
+                "num_layers": 4,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 0.001,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 5,
+                "lr_factor": 0.25,
+                "lr_patience": 5
+            },
+            "value": 0.060047902166843414,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 7,
+            "params": {
+                "hidden_size": 64,
+                "num_layers": 4,
+                "dropout": 0.1,
+                "learning_rate": 0.01,
+                "weight_decay": 0.0,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.25,
+                "lr_patience": 10
+            },
+            "value": 0.05637083947658539,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 8,
+            "params": {
+                "hidden_size": 512,
+                "num_layers": 5,
+                "dropout": 0.4,
+                "learning_rate": 0.001,
+                "weight_decay": 0.001,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.25,
+                "lr_patience": 10
+            },
+            "value": 0.06280440092086792,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 9,
+            "params": {
+                "hidden_size": 64,
+                "num_layers": 3,
+                "dropout": 0.5,
+                "learning_rate": 1e-05,
+                "weight_decay": 0.001,
+                "bidirectional": false,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.5,
+                "lr_patience": 5
+            },
+            "value": 0.06494748592376709,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 10,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 2,
+                "dropout": 0.1,
+                "learning_rate": 0.01,
+                "weight_decay": 0.0,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.057080578058958054,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 11,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 2,
+                "dropout": 0.1,
+                "learning_rate": 0.01,
+                "weight_decay": 0.0,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.05426938086748123,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 12,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 2,
+                "dropout": 0.1,
+                "learning_rate": 0.01,
+                "weight_decay": 0.0,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.0567709319293499,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 13,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 1,
+                "dropout": 0.1,
+                "learning_rate": 0.01,
+                "weight_decay": 0.0,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.056734535843133926,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 14,
+            "params": {
+                "hidden_size": 64,
+                "num_layers": 2,
+                "dropout": 0.1,
+                "learning_rate": 0.01,
+                "weight_decay": 0.0,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.05806799232959747,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 15,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 1,
+                "dropout": 0.1,
+                "learning_rate": 0.01,
+                "weight_decay": 0.0,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.25,
+                "lr_patience": 10
+            },
+            "value": 0.05911124870181084,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 16,
+            "params": {
+                "hidden_size": 64,
+                "num_layers": 2,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 0.0,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.05484537407755852,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 17,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 2,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.05498499795794487,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 18,
+            "params": {
+                "hidden_size": 64,
+                "num_layers": 2,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 0.0,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.05518833547830582,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 19,
+            "params": {
+                "hidden_size": 256,
+                "num_layers": 2,
+                "dropout": 0.2,
+                "learning_rate": 0.0001,
+                "weight_decay": 0.0,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 5,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.05744414031505585,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 20,
+            "params": {
+                "hidden_size": 32,
+                "num_layers": 2,
+                "dropout": 0.3,
+                "learning_rate": 1e-05,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.0600891150534153,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 21,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 2,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.0556831881403923,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 22,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 2,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.055803898721933365,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 23,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 2,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.055083874613046646,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 24,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 2,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.055358801037073135,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 25,
+            "params": {
+                "hidden_size": 64,
+                "num_layers": 1,
+                "dropout": 0.0,
+                "learning_rate": 0.001,
+                "weight_decay": 0.0,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.05829295516014099,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 26,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 2,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 0.0,
+                "bidirectional": false,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.5,
+                "lr_patience": 5
+            },
+            "value": 0.05561552941799164,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 27,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 3,
+                "dropout": 0.3,
+                "learning_rate": 0.0001,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.05723116174340248,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 28,
+            "params": {
+                "hidden_size": 64,
+                "num_layers": 2,
+                "dropout": 0.4,
+                "learning_rate": 0.001,
+                "weight_decay": 0.0,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 5,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.05616224184632301,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 29,
+            "params": {
+                "hidden_size": 256,
+                "num_layers": 2,
+                "dropout": 0.2,
+                "learning_rate": 1e-05,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 10,
+                "lr_factor": 0.1,
+                "lr_patience": 5
+            },
+            "value": 0.05591495335102081,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 30,
+            "params": {
+                "hidden_size": 32,
+                "num_layers": 2,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 10,
+                "lr_factor": 0.5,
+                "lr_patience": 10
+            },
+            "value": 0.056449953466653824,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 31,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 2,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.055290818214416504,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 32,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 2,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.05666179582476616,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 33,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 3,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.05515793338418007,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 34,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 2,
+                "dropout": 0.4,
+                "learning_rate": 0.0001,
+                "weight_decay": 0.0001,
+                "bidirectional": false,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.057623282074928284,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 35,
+            "params": {
+                "hidden_size": 512,
+                "num_layers": 5,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 1e-05,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 10,
+                "lr_factor": 0.1,
+                "lr_patience": 5
+            },
+            "value": 0.057328980416059494,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 36,
+            "params": {
+                "hidden_size": 256,
+                "num_layers": 2,
+                "dropout": 0.5,
+                "learning_rate": 1e-05,
+                "weight_decay": 0.0001,
+                "bidirectional": false,
+                "num_epochs": 100,
+                "early_stopping_patience": 5,
+                "lr_factor": 0.5,
+                "lr_patience": 10
+            },
+            "value": 0.0592537447810173,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 37,
+            "params": {
+                "hidden_size": 64,
+                "num_layers": 4,
+                "dropout": 0.0,
+                "learning_rate": 0.0001,
+                "weight_decay": 0.0001,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.1,
+                "lr_patience": 10
+            },
+            "value": 0.05634777992963791,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 38,
+            "params": {
+                "hidden_size": 512,
+                "num_layers": 1,
+                "dropout": 0.2,
+                "learning_rate": 0.001,
+                "weight_decay": 0.001,
+                "bidirectional": true,
+                "num_epochs": 100,
+                "early_stopping_patience": 10,
+                "lr_factor": 0.1,
+                "lr_patience": 5
+            },
+            "value": 0.06086223945021629,
+            "state": "COMPLETE"
+        },
+        {
+            "number": 39,
+            "params": {
+                "hidden_size": 128,
+                "num_layers": 5,
+                "dropout": 0.5,
+                "learning_rate": 0.01,
+                "weight_decay": 0.0,
+                "bidirectional": false,
+                "num_epochs": 100,
+                "early_stopping_patience": 15,
+                "lr_factor": 0.25,
+                "lr_patience": 10
+            },
+            "value": 0.06645262986421585,
+            "state": "COMPLETE"
+        }
+    ]
+}
