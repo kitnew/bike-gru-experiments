@@ -50,7 +50,7 @@ def extract_multiple_trial_results(file_path: str) -> List[Dict[str, Any]]:
             {
                 'trial_id': trial.get('number'),
                 'params': trial.get('params', {}),
-                'best_value': trial.get('value'),
+                'best_value': float(trial.get('value')),
                 'best_epoch': trial.get('state', {}),
                 'file_path': file_path
             }
@@ -60,8 +60,8 @@ def extract_multiple_trial_results(file_path: str) -> List[Dict[str, Any]]:
     return [
         {
             'trial_id': trial.get('trial_id'),
-            'params': trial.get('params', {}),
-            'best_value': trial.get('best_value'),
+            'params': trial.get('params', {}),  
+            'best_value': float(trial.get('best_value', 1)),
             'metric': trial.get('metric', 'unknown'),
             'best_epoch': trial.get('best_epoch'),
             'file_path': file_path
