@@ -1,0 +1,66 @@
+% \section{Z\'aver (zhodnotenie rie\v{s}enia)}
+% 
+% Táto časť\/ záverečnej práce je povinná. Autor uvedie zhodnotenie
+% riešenia. Uvedie výhody, nevýhody riešenia,  použitie výsledkov, ďalšie
+% možnosti a~pod., prípadne načrtne iný spôsob riešenia úloh, resp.
+% uvedie, prečo postupoval uvedeným spôsobom.
+%  
+% 
+% Na strane \pageref{o:nlp} Vám ukážem ako sa používajú citácie.
+% Ukážka:
+% 
+% \cite{Sumichrast2013}
+% 
+% \citep{Sumichrast2013}
+% 
+% \citealt{Sumichrast2013}
+% 
+% \citeyear{Sumichrast2013}
+% 
+% \citeauthor{Sumichrast2013}
+
+
+% \begin{figure}
+% \centering
+% \includegraphics[width=.95\textwidth,angle=0]{natlib.PNG}
+% \caption{Ukážka použitia \texttt{natlib package}}\label{o:nlp}
+% \end{figure}
+
+\section{Záver}
+
+Cieľom tejto práce bolo navrhnúť, implementovať a vyhodnotiť optimalizačný rámec pre model GRU, ktorý umožňuje efektívnu predikciu na základe časových radov. V priebehu riešenia sme aplikovali tri rôzne prístupy k optimalizácii hyperparametrov: Random Search, Bayesian Search a Grid Search. Finálna verzia modelu bola trénovaná s využitím najlepšej kombinácie hyperparametrov získaných z Grid Search. Následná analýza preukázala vysokú generalizačnú schopnosť a stabilitu modelu.
+
+\subsection{Zhrnutie dosiahnutých výsledkov}
+
+\begin{itemize}
+\item Bol navrhnutý a implementovaný univerzálny rámec pre hľadanie optimálnych hyperparametrov GRU modelov.
+\item Vyvinutý model dosiahol výborné výsledky na reálnej dátovej množine (požičky bicyklov v Londýne).
+\item Získané výsledky boli dôkladne analyzované pomocou metrických ukazovateľov (RMSE, MAE, R\textsuperscript{2}, MAPE, SMAPE, atď.).
+\item Bola overená účinnosť kombinovaného prístupu k optimalizácii – Random a Bayesian Search na zúženie priestoru a Grid Search pre detailné ladenie.
+\item Najlepší model dosiahol hodnotu R\textsuperscript{2} = 0.83122 na validačnej množine, čo predstavuje vysoko presný výsledok vzhľadom na komplexnosť úlohy.
+\end{itemize}
+
+\subsection{Hodnotenie kvality riešenia}
+
+Model vykazuje:
+
+\begin{itemize}
+\item Rýchlu konvergenciu počas trénovania bez známok výrazného overfittingu.
+\item Stabilitu počas celého tréningového procesu.
+\item Výborný súlad medzi trénovacou a validačnou množinou.
+\item Robustnosť voči výkyvom v dátach, ako ukazujú metriky PEAK ERROR a SMAPE.
+\end{itemize}
+
+Zvolený prístup sa ukázal ako efektívny a prakticky realizovateľný aj pri obmedzených výpočtových zdrojoch, najmä vďaka kombinácii adaptívnych a systematických metód optimalizácie.
+
+\subsection{Odporúčania a návrhy na zlepšenie}
+
+\begin{itemize}
+\item Rozšíriť množinu testovaných metód o ďalšie optimalizačné techniky ako napr. Tree-structured Parzen Estimator (TPE) alebo Hyperband.
+\item Preskúmať vplyv iných architektúr (napr. LSTM) pre porovnanie s GRU.
+\item Implementovať možnosti automatickej predikcie na produkčné dáta v reálnom čase.
+\end{itemize}
+
+\subsection{Záverečné zhodnotenie}
+
+Zvolený prístup bol v praxi úspešný a viedol k vytvoreniu predikčného systému, ktorý je nielen presný, ale aj stabilný a efektívne navrhnutý. Model GRU trénovaný na optimalizovanej sade hyperparametrov dosiahol veľmi dobré výsledky a preukázal potenciál využitia pri predikcii časových radov v rôznych doménach. Celý vývojový cyklus — od analýzy problému cez výber metód, implementáciu, optimalizáciu až po vizualizáciu a vyhodnotenie — bol realizovaný systematicky a metodicky správne.
