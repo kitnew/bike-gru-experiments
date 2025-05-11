@@ -98,8 +98,9 @@ If you would like to look closer at experiments results, you can find them in `e
 
 #### Plots
 
-Interested in rough visualization of results? You can find them in `experiments/plots` directory.
+You can find them in `experiments/plots` directory.
 I'm not really good at matplotlib but I tried to cover most of the important metrics.
+
 ---
 
 ## 📊 Results & Benchmarks
