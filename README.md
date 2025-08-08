@@ -1,4 +1,4 @@
-# Hyperparameter Optimization for GRU-based Bike Rental Forecasting
+# Hybrid Hyperparameter Optimization of GRU Models on Sequential Data
 
 This repository is an open-source implementation of the hyperparameter optimization for GRU-based bike rental forecasting using hybrid approach to search pipeline with grid search, random search and Bayesian optimization.
 
